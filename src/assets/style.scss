@@ -1,0 +1,20 @@
+.checkbox-wrapper {
+  position: relative;
+  height: 22px;
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    position: absolute;
+  }
+
+  .checked {
+    background-color: black;
+  }
+
+  .title {
+    margin-left: 30px;
+    cursor: pointer;
+  }
+}

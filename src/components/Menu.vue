@@ -5,6 +5,7 @@
             <router-link tag="li" :to="{ path: '/data' }">DataDeclaration</router-link>
             <router-link tag="li" :to="{ path: '/recursive' }">RecursiveTitle</router-link>
             <router-link tag="li" :to="{ path: '/templates' }">Templates</router-link>
+            <router-link tag="li" :to="{ path: '/components' }">Components</router-link>
         </ul>
     </div>
 </template>

@@ -5,7 +5,133 @@ import { router } from './router'
 Vue.config.productionTip = false
 
 Vue.component('template-component', {
-  template: '<div style="padding: 20px; border: 1px solid blue;">Template component</div>'
+  template: '<div style.scss="padding: 20px; border: 1px solid blue;">Template component</div>'
+});
+
+// example of template components (global declaration)
+
+Vue.component('my-checkbox-string', {
+  template: `<div class="checkbox-wrapper" @click="check"><div :class="{ checkbox: true, checked: checked }"></div><div class="title">{{ title }}</div></div>`,
+  data() {
+    return {
+      checked: false,
+      title: 'Check me'
+    }
+  },
+  methods: {
+    check() {
+      this.checked = !this.checked;
+    }
+  }
+});
+
+Vue.component('my-checkbox-literal', {
+  template: `<div class="checkbox-wrapper" @click="check">
+			   <div :class="{ checkbox: true, checked: checked }"></div>
+			   <div class="title">{{ title }}</div>
+			</div>`,
+  data() {
+    return {
+      checked: false,
+      title: 'Check me'
+    }
+  },
+  methods: {
+    check() {
+      this.checked = !this.checked;
+    }
+  }
+});
+
+Vue.component('my-checkbox-x-template', {
+  template: '#checkbox-template',
+  data() {
+    return {
+      checked: false,
+      title: 'Check me'
+    }
+  },
+  methods: {
+    check() {
+      this.checked = !this.checked;
+    }
+  }
+});
+
+Vue.component('my-checkbox-inline', {
+  data() {
+    return {
+      checked: false,
+      title: 'Check me'
+    }
+  },
+  methods: {
+    check() {
+      this.checked = !this.checked;
+    }
+  }
+});
+
+Vue.component('my-checkbox-render-func', {
+  data() {
+    return {
+      checked: false,
+      title: 'Check me'
+    }
+  },
+  methods: {
+    check() {
+      this.checked = !this.checked;
+    }
+  },
+  render(createElement) {
+    return createElement(
+        'div', {
+          attrs: {
+            'class': 'checkbox-wrapper'
+          },
+          on: {
+            click: this.check
+          }
+        }, [
+          createElement(
+              'div', {
+                'class': {
+                  checkbox: true,
+                  checked: this.checked
+                }
+              }
+          ),
+          createElement(
+              'div', {
+                attrs: {
+                  'class': 'title'
+                }
+              }, [this.title]
+          )
+        ]
+    );
+  }
+});
+
+Vue.component('my-checkbox-jsx', {
+  data() {
+    return {
+      checked: false,
+      title: 'Check me'
+    }
+  },
+  methods: {
+    check() {
+      this.checked = !this.checked;
+    }
+  },
+  render() {
+    return <div class="checkbox-wrapper" onClick={ this.check }>
+      <div class={{ checkbox: true, checked: this.checked }}></div>
+      <div class="title">{ this.title }</div>
+    </div>
+  }
 });
 
 // mounting Vue instance with $mount method (delay is possible)
@@ -19,8 +145,11 @@ new Vue({
 
 // new Vue({
 //   el: '#app',
+//   router,
 //   render: h => h(App),
 // })
+
+// basic explanation of Vue reactivity system
 
 // declaring root-level reactive props (is it?)
 
