@@ -7,6 +7,7 @@ import ComponentInDepth from '../components/ComponentInDepth'
 import ComponentsCommunication from '../components/communication/ComponentsCommunication'
 import DynamicComponents from '../components/DynamicComponents.vue'
 import DynamicStyling from '../components/styling/DynamicStyling.vue'
+import Directives from '../components/directives/Directives.vue'
 
 export default [
     { path: '/', component: Home },
@@ -17,5 +18,6 @@ export default [
     { path: '/component-in-depth', component: ComponentInDepth },
     { path: '/communication', component: ComponentsCommunication },
     { path: '/dynamic-components', component: DynamicComponents },
-    { path: '/dynamic-styling', component: DynamicStyling }
+    { path: '/dynamic-styling', component: DynamicStyling },
+    { path: '/directives', component: Directives }
 ]
