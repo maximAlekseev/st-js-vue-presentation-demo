@@ -6,6 +6,7 @@
 </template>
 <script>
     export default {
+        name: 'CheckboxSFC',
         data() {
             return {
                 checked: false,
