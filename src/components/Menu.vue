@@ -9,6 +9,7 @@
             <router-link tag="li" :to="{ path: '/component-in-depth' }" active-class="active-item">Component-in-depth</router-link>
             <router-link tag="li" :to="{ path: '/communication' }" active-class="active-item">Components communication</router-link>
             <router-link tag="li" :to="{ path: '/dynamic-components' }" active-class="active-item">Dynamic components</router-link>
+            <router-link tag="li" :to="{ path: '/dynamic-styling' }" active-class="active-item">Dynamic styling</router-link>
         </ul>
     </div>
 </template>

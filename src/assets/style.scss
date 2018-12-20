@@ -2,6 +2,14 @@ body {
   margin: 0;
 }
 
+button {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 20px;
+}
+
 .checkbox-wrapper {
   position: relative;
   height: 22px;
@@ -21,4 +29,10 @@ body {
     margin-left: 30px;
     cursor: pointer;
   }
+}
+
+.styled-box {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
 }

@@ -1,5 +1,10 @@
 # st-js-vue-presentation-demo
 
+## To be able to use Vue CLI you will need to install it
+```
+npm install -g @vue/cli
+```
+
 ## Project setup
 ```
 npm install

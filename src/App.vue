@@ -18,6 +18,7 @@
 </script>
 
 <style lang="scss">
+  @import "../node_modules/bootstrap/scss/bootstrap";
   @import "./assets/style.scss";
   .main-content {
     padding: 20px;
