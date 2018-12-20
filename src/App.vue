@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <Menu />
-    <hr />
-    <router-view />
+    <div class="main-content">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -18,4 +19,7 @@
 
 <style lang="scss">
   @import "./assets/style.scss";
+  .main-content {
+    padding: 20px;
+  }
 </style>

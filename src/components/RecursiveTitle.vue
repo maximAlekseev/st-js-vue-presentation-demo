@@ -14,6 +14,9 @@
             return {
                 localCount: count--
             }
+        },
+        destroyed() {
+            count = 10
         }
     }
 </script>

@@ -1,13 +1,14 @@
 <template>
-    <div>
+    <div class="main-menu">
         <ul>
-            <router-link tag="li" :to="{ path: '/' }">Home</router-link>
-            <router-link tag="li" :to="{ path: '/data' }">DataDeclaration</router-link>
-            <router-link tag="li" :to="{ path: '/recursive' }">RecursiveTitle</router-link>
-            <router-link tag="li" :to="{ path: '/templates' }">Templates</router-link>
-            <router-link tag="li" :to="{ path: '/components' }">Components</router-link>
-            <router-link tag="li" :to="{ path: '/component-in-depth' }">Component-in-depth</router-link>
-            <router-link tag="li" :to="{ path: '/communication' }">Components communication</router-link>
+            <router-link tag="li" :to="{ path: '/' }" exact active-class="active-item">Home</router-link>
+            <router-link tag="li" :to="{ path: '/data' }" active-class="active-item">DataDeclaration</router-link>
+            <router-link tag="li" :to="{ path: '/recursive' }" active-class="active-item">RecursiveTitle</router-link>
+            <router-link tag="li" :to="{ path: '/templates' }" active-class="active-item">Templates</router-link>
+            <router-link tag="li" :to="{ path: '/components' }" active-class="active-item">Components</router-link>
+            <router-link tag="li" :to="{ path: '/component-in-depth' }" active-class="active-item">Component-in-depth</router-link>
+            <router-link tag="li" :to="{ path: '/communication' }" active-class="active-item">Components communication</router-link>
+            <router-link tag="li" :to="{ path: '/dynamic-components' }" active-class="active-item">Dynamic components</router-link>
         </ul>
     </div>
 </template>
@@ -19,17 +20,32 @@
 </script>
 
 <style lang="scss" scoped>
-    ul {
-        list-style: none;
-        padding: 0;
+    .main-menu {
+        border-bottom: 1px solid gray;
 
-        li {
-            display: inline-block;
-            padding: 15px 25px;
-            border-right: 1px solid black;
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
 
-            &:last-of-type {
-                border: none;
+            li {
+                display: inline-block;
+                padding: 15px 25px;
+                border-right: 1px solid gray;
+                cursor: pointer;
+
+                &:last-of-type {
+                    border: none;
+                }
+
+                &:hover {
+                    background-color: lightgrey;
+                }
+
+                &.active-item {
+                    background-color: lightgrey;
+                }
             }
         }
     }
