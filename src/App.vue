@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <Menu />
-    <div class="main-content">
-      <router-view />
+    <div class="app-container">
+      <Menu />
+      <div class="main-content">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Menu from './components/Menu'
+  import Menu from './components/common/Menu'
   export default {
     name: 'app',
     components: {
@@ -20,7 +22,17 @@
 <style lang="scss">
   @import "../node_modules/bootstrap/scss/bootstrap";
   @import "./assets/style.scss";
-  .main-content {
-    padding: 20px;
+
+  #app {
+
+    .app-container {
+      min-height: 100vh;
+      display: flex;
+
+      .main-content {
+        padding: 30px;
+        flex: 3;
+      }
+    }
   }
 </style>

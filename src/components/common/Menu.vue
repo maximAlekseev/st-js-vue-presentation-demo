@@ -23,19 +23,17 @@
 
 <style lang="scss" scoped>
     .main-menu {
+        border-right: 1px solid lightgray;
+        flex: 1;
 
         ul {
-            display: flex;
-            flex-wrap: wrap;
             list-style: none;
             padding: 0;
             margin: 0;
 
             li {
-                display: inline-block;
                 padding: 15px 25px;
-                border-right: 1px solid gray;
-                border-bottom: 1px solid gray;
+                border-bottom: 1px solid lightgray;
                 cursor: pointer;
 
                 &:last-of-type {

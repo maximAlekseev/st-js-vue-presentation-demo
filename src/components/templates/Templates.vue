@@ -1,7 +1,10 @@
 <template>
     <div>
-        <h3>Template components require Runtime compiler enabled in vue.config.js</h3>
+        <h1>Template components</h1>
+        <hr />
         <template-component />
+        <hr />
+        <h5>*Template components require Runtime compiler enabled in vue.config.js</h5>
     </div>
 </template>
 

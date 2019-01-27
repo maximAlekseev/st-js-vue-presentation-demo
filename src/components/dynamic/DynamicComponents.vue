@@ -20,8 +20,8 @@
 </template>
 
 <script>
-    import DynamicOne from './dynamic/DynamicOne.vue'
-    import DynamicTwo from './dynamic/DynamicTwo.vue'
+    import DynamicOne from './DynamicOne.vue'
+    import DynamicTwo from './DynamicTwo.vue'
     export default {
         name: 'DynamicComponents',
         components: {

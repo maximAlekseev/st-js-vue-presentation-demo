@@ -1,140 +1,34 @@
 import Vue from 'vue'
 import App from './App.vue'
 import { router } from './router'
+import TemplateComponent from './non-sfc-components/template-component'
+import LiteralComponent from './non-sfc-components/literal-component'
+import XTemplateComponent from './non-sfc-components/x-template-component'
+import InlineComponent from './non-sfc-components/inline-component'
+import RenderFunctionComponent from './non-sfc-components/render-function-component'
+import JSXComponent from './non-sfc-components/JSX-component'
 
 export const EventBus = new Vue()
 
 Vue.config.productionTip = false
 
 Vue.component('template-component', {
-  template: '<div style.scss="padding: 20px; border: 1px solid blue;">Template component</div>'
+  template: '<div style.scss="padding: 20px; border: 1px solid blue;">Template component is here!</div>'
 });
 
 // example of template components (global declaration)
 
-Vue.component('my-checkbox-string', {
-  template: `<div class="checkbox-wrapper" @click="check"><div :class="{ checkbox: true, checked: checked }"></div><div class="title">{{ title }}</div></div>`,
-  data() {
-    return {
-      checked: false,
-      title: 'Check me'
-    }
-  },
-  methods: {
-    check() {
-      this.checked = !this.checked;
-    }
-  }
-});
+Vue.component('my-checkbox-string', TemplateComponent);
 
-Vue.component('my-checkbox-literal', {
-  template: `<div class="checkbox-wrapper" @click="check">
-			   <div :class="{ checkbox: true, checked: checked }"></div>
-			   <div class="title">{{ title }}</div>
-			</div>`,
-  data() {
-    return {
-      checked: false,
-      title: 'Check me'
-    }
-  },
-  methods: {
-    check() {
-      this.checked = !this.checked;
-    }
-  }
-});
+Vue.component('my-checkbox-literal', LiteralComponent);
 
-Vue.component('my-checkbox-x-template', {
-  template: '#checkbox-template',
-  data() {
-    return {
-      checked: false,
-      title: 'Check me'
-    }
-  },
-  methods: {
-    check() {
-      this.checked = !this.checked;
-    }
-  }
-});
+Vue.component('my-checkbox-x-template', XTemplateComponent);
 
-Vue.component('my-checkbox-inline', {
-  data() {
-    return {
-      checked: false,
-      title: 'Check me'
-    }
-  },
-  methods: {
-    check() {
-      this.checked = !this.checked;
-    }
-  }
-});
+Vue.component('my-checkbox-inline', InlineComponent);
 
-Vue.component('my-checkbox-render-func', {
-  data() {
-    return {
-      checked: false,
-      title: 'Check me'
-    }
-  },
-  methods: {
-    check() {
-      this.checked = !this.checked;
-    }
-  },
-  render(createElement) {
-    return createElement(
-        'div', {
-          attrs: {
-            'class': 'checkbox-wrapper'
-          },
-          on: {
-            click: this.check
-          }
-        }, [
-          createElement(
-              'div', {
-                'class': {
-                  checkbox: true,
-                  checked: this.checked
-                }
-              }
-          ),
-          createElement(
-              'div', {
-                attrs: {
-                  'class': 'title'
-                }
-              }, [this.title]
-          )
-        ]
-    );
-  }
-});
+Vue.component('my-checkbox-render-func', RenderFunctionComponent);
 
-Vue.component('my-checkbox-jsx', {
-  data() {
-    return {
-      checked: false,
-      title: 'Check me'
-    }
-  },
-  methods: {
-    check() {
-      this.checked = !this.checked;
-    }
-  },
-  render() {
-    return <div class="checkbox-wrapper" onClick={ this.check }>
-      <div class={{ checkbox: true, checked: this.checked }}></div>
-      <div class="title">{ this.title }</div>
-    </div>
-  }
-});
+Vue.component('my-checkbox-jsx', JSXComponent);
 
 // mounting Vue instance with $mount method (delay is possible)
 
