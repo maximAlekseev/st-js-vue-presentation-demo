@@ -7,6 +7,7 @@
             <router-link tag="li" :to="{ path: '/templates' }" active-class="active-item">Templates</router-link>
             <router-link tag="li" :to="{ path: '/directives' }" active-class="active-item">Directives</router-link>
             <router-link tag="li" :to="{ path: '/components' }" active-class="active-item">Components</router-link>
+            <router-link tag="li" :to="{ path: '/components-declaration' }" active-class="active-item">Components declaration</router-link>
             <router-link tag="li" :to="{ path: '/component-in-depth' }" active-class="active-item">Component-in-depth</router-link>
             <router-link tag="li" :to="{ path: '/communication' }" active-class="active-item">Components communication</router-link>
             <router-link tag="li" :to="{ path: '/dynamic-components' }" active-class="active-item">Dynamic components</router-link>

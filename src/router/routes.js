@@ -8,6 +8,7 @@ import ComponentsCommunication from '../components/communication/ComponentsCommu
 import DynamicComponents from '../components/dynamic/DynamicComponents.vue'
 import DynamicStyling from '../components/styling/DynamicStyling.vue'
 import Directives from '../components/directives/Directives.vue'
+import ComponentsDeclaration from '../components/components-declaration/ComponentsDeclaration'
 
 export default [
     { path: '/', component: Home },
@@ -15,6 +16,7 @@ export default [
     { path: '/recursive', component: RecursiveTitle },
     { path: '/templates', component: Templates },
     { path: '/components', component: Components },
+    { path: '/components-declaration', component: ComponentsDeclaration },
     { path: '/component-in-depth', component: ComponentInDepth },
     { path: '/communication', component: ComponentsCommunication },
     { path: '/dynamic-components', component: DynamicComponents },

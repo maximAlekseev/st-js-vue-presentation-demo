@@ -7,6 +7,7 @@ import XTemplateComponent from './non-sfc-components/x-template-component'
 import InlineComponent from './non-sfc-components/inline-component'
 import RenderFunctionComponent from './non-sfc-components/render-function-component'
 import JSXComponent from './non-sfc-components/JSX-component'
+import SomeComponent from './components/components-declaration/SomeComponent'
 
 export const EventBus = new Vue()
 
@@ -29,6 +30,10 @@ Vue.component('my-checkbox-inline', InlineComponent);
 Vue.component('my-checkbox-render-func', RenderFunctionComponent);
 
 Vue.component('my-checkbox-jsx', JSXComponent);
+
+// component global declaration
+
+// Vue.component('some-component', SomeComponent);
 
 // mounting Vue instance with $mount method (delay is possible)
 
