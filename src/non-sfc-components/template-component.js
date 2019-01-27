@@ -1,5 +1,5 @@
 export default {
-    template: '<div class="checkbox-wrapper" @click="check"><div :class="{ checkbox: true, checked: checked }"></div><div class="title">{{ title }}</div></div>',
+    template: '<div class="checkbox-wrapper" @click="check"><div :class="{ checkbox: true, checked: checked }"></div><div class="title">{{ title }}, Status: {{checked}}</div></div>',
     data() {
         return {
             checked: false,

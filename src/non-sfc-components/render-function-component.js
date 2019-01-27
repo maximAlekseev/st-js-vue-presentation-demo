@@ -33,7 +33,7 @@ export default {
                         attrs: {
                             'class': 'title'
                         }
-                    }, [this.title]
+                    }, [this.title, `, Status: ${this.checked}`]
                 )
             ]
         );
