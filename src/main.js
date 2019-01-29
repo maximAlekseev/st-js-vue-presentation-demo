@@ -84,32 +84,33 @@ new Vue({
 // declaring sub-level reactive props
 
 // const vm = new Vue({
-//   el: '#app',
-//   data() {
-//     return {
-//       obj: {
-//         value: 1
-//       }
-//     }
-//   },
-//   template: `<div>
+//     el: '#app',
+//     data() {
+//         return {
+//             obj: {
+//                 value: 1
+//             }
+//         }
+//     },
+//     template: `<div>
 //     <h3 @click="inc">This is dummy app</h3>
 //     <p @click="inc">{{obj.value}}</p>
 //     <p @click="incAdded">{{obj.newValue}}</p>
 // </div>`,
-//   methods: {
-//     inc() {
-//       this.obj.value++;
+//     mounted() {
+//         // this.$set(this.obj, 'newValue', 5)
 //     },
-//     incAdded() {
-//       console.log('obj.newValue is trying to update');
-//       this.obj.newValue++;
+//     methods: {
+//         inc() {
+//             this.obj.value++;
+//         },
+//         incAdded() {
+//             console.log('obj.newValue is trying to update');
+//             this.obj.newValue++;
+//         }
 //     }
-//   }
 // })
 //
 // vm.obj.value = 2
 //
 // vm.obj.newValue = 7
-
-// Vue.set(vm.obj, 'newValue', 5)
