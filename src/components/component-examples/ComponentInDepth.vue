@@ -1,8 +1,5 @@
 <template>
     <div>
-        <h2>Example component</h2>
-        <!--<CheckboxSFC />-->
-        <checkbox-sfc />
         <h3>Basic computed property example</h3>
         <input type="text" v-model="inputString" placeholder="enter here" />
         <p>Calculation in template: {{inputString.split('').reverse().join('')}}</p>
@@ -34,7 +31,6 @@
 </template>
 
 <script>
-    import CheckboxSFC from './CheckboxSFC'
     export default {
         name: "ComponentInDepth",
         beforeCreate() { },
@@ -45,10 +41,6 @@
         updated() { },
         beforeDestroy() { },
         destroyed() { },
-        components: {
-            // CheckboxSFC
-            'checkbox-sfc': CheckboxSFC
-        },
         data() {
             return {
                 inputString: '',

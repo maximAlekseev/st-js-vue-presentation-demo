@@ -28,13 +28,13 @@
                 },
                 changedStyles: {
                     border: '1px solid blue',
-                    background: 'silver'
+                    background: 'brown'
                 },
-                normalStyle: true,
                 anotherStyles: {
                     border: '1px solid yellow',
                     background: 'green'
-                }
+                },
+                normalStyle: true
             }
         },
         computed: {
@@ -44,7 +44,3 @@
         }
     }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

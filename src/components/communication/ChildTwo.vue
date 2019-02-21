@@ -1,7 +1,7 @@
 <template>
     <div class="child-two">
         <p>{{message}}</p>
-        <p>{{providedMessage}}</p>
+        <p>Provided massage: {{providedMessage}}</p>
     </div>
 </template>
 
