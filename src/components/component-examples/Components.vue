@@ -21,7 +21,6 @@
         <CheckboxSFC />
         <hr />
         <h6>*To use JSX we need to install babel-preset-vue-app and define it in babel.config.js</h6>
-        <h6>*To render boolean value "checked" in JSX-styled component render function we need to convert to string</h6>
     </div>
 </template>
 

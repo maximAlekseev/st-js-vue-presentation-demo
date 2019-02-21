@@ -7,7 +7,6 @@ import XTemplateComponent from './non-sfc-components/x-template-component'
 import InlineComponent from './non-sfc-components/inline-component'
 import RenderFunctionComponent from './non-sfc-components/render-function-component'
 import JSXComponent from './non-sfc-components/JSX-component'
-import SomeComponent from './components/components-declaration/SomeComponent'
 
 export const EventBus = new Vue()
 
@@ -30,10 +29,6 @@ Vue.component('my-checkbox-inline', InlineComponent);
 Vue.component('my-checkbox-render-func', RenderFunctionComponent);
 
 Vue.component('my-checkbox-jsx', JSXComponent);
-
-// component global declaration
-
-// Vue.component('some-component', SomeComponent);
 
 // mounting Vue instance with $mount method (delay is possible)
 
@@ -61,10 +56,14 @@ new Vue({
 //       value: 1
 //     }
 //   },
+//   mounted() {
+//       // this.$set(this, 'newValue', 7); // Nope.
+//   },
 //   template: `<div>
 //     <h3 @click="inc">This is dummy app</h3>
 //     <p @click="inc">{{value}}</p>
 //     <p @click="incAdded">{{newValue}}</p>
+//     <!--<p>{{newValue}}</p>-->
 // </div>`,
 //   methods: {
 //     inc() {
@@ -81,7 +80,7 @@ new Vue({
 //
 // vm.newValue = 7
 
-// declaring sub-level reactive props
+// declaring reactive sub-level props the right way
 
 // const vm = new Vue({
 //     el: '#app',
@@ -98,7 +97,7 @@ new Vue({
 //     <p @click="incAdded">{{obj.newValue}}</p>
 // </div>`,
 //     mounted() {
-//         // this.$set(this.obj, 'newValue', 5)
+//         // this.$set(this.obj, 'newValue', 7)
 //     },
 //     methods: {
 //         inc() {

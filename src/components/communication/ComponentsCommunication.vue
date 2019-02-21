@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Components communication</h2>
-        <h3>Passing props to children</h3>
+        <h3>Passing props to children with provider / injector syntax</h3>
         <ChildOne
             :message="message"
         />
@@ -43,7 +43,7 @@
         },
         provide() {
             return {
-                message: this.message
+                providedMessage: this.providedMessage
             }
         },
         data() {
@@ -51,7 +51,8 @@
                 message: 'Hey from parent component!',
                 thirdChildMessage: '',
                 fourChildMessage: '',
-                fiveChildMessage: ''
+                fiveChildMessage: '',
+                providedMessage: 'Provided message'
             }
         },
         methods: {

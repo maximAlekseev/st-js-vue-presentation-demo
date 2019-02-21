@@ -1,13 +1,17 @@
 <template>
     <div class="child-two">
         <p>{{message}}</p>
+        <p>{{providedMessage}}</p>
     </div>
 </template>
 
 <script>
     export default {
         name: "ChildTwo",
-        inject: ['message']
+        props: {
+            message: { type: String }
+        },
+        inject: ['providedMessage']
     }
 </script>
 

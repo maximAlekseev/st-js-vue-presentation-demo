@@ -1,7 +1,10 @@
 <template>
     <div class="child-one">
         <p>{{message}}</p>
-        <ChildTwo />
+        <p>Provided message: {{providedMessage}}</p>
+        <ChildTwo
+                :message="message"
+        />
     </div>
 </template>
 
@@ -12,6 +15,7 @@
         components: {
             ChildTwo
         },
+        inject: ['providedMessage'],
         // props: ['message']
         props: {
             message: { type: String, required: true }

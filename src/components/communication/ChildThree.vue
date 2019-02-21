@@ -7,6 +7,7 @@
 <script>
     export default {
         name: "ChildThree",
+        inject: ['providedMessage'],
         props: {
             sendMessage: {
                 type: Function
